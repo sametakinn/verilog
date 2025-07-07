@@ -8,11 +8,11 @@ module uart_rx_tb;
     parameter bit_period = 1_000_000_000 / c_baudrate;  // 1 bit süresi (ns cinsinden)
 
     // Testbench sinyalleri
-    reg clk = 0;
-    reg rst_n;
-    reg rx_in_i;
-    wire [7:0] dout_o;
-    wire rx_done_tick_o;
+    logic clk = 0;
+    logic rst_n;
+    logic rx_in_i;
+    logic [7:0] dout_o;
+    logic rx_done_tick_o;
 
     // UART RX modülünü instantiate et
     uart_rx #(
